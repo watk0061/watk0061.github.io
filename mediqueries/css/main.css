@@ -1,0 +1,101 @@
+/*
+Apply a natural box layout model to all elements, but it is also allowing components to change
+*/
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing:inherit;
+}
+/* Properly calculates the height of the containing element with elements floated inside*/
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+body {
+    margin: 0;
+    background-image: url(https://img.freepik.com/free-photo/close-up-photo-afro-american-basketball-player-throwing-ball_171337-9229.jpg?w=1060&t=st=1667311778~exp=1667312378~hmac=e7ded58b6db1130ba89c5208dffb7dd65e3a7d5131ac61040e0fc92c51ff9a8a);
+}
+
+/* Assign a background color to
+.header
+.main-content
+.sidebar
+.footer
+*/
+
+.header,
+.main-content,
+.sidebar,
+.footer {
+    background-color:rgb(178, 145, 96);
+    margin: 2px 0;
+}
+
+.header {
+    height: 60px;
+}
+
+.main-content {
+    height: 160px;
+}
+
+.sidebar {
+    height: 40px;
+}
+
+.footer {
+    height: 40px;
+}
+
+/*Center components inside at a max width of 400px*/
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.header {
+    padding: 2%;
+}
+
+.header h1 {
+    text-align:center;
+    margin: 0;
+}
+
+.main-content {
+    padding: 2%;
+}
+
+.main-content h2 {
+    margin-top: 0;
+}
+
+.main-content p:last-child {
+    margin-bottom: 0;
+}
+
+.sidebar img {
+    max-width: 100%;
+}
+
+/*At 400px wide we want to float the main content and sidebar beside eachother*/
+@media screen and (min-width: 400px) {
+    .main-content {
+        width: 70%;
+        float: left;
+    }
+
+    .sidebar {
+        width: 29%;
+        float: right;
+    }
+    
+}

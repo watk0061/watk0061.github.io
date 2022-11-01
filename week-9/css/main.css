@@ -1,0 +1,58 @@
+body {
+    font-size: 16px;
+    background-color:aliceblue;
+}
+
+h1 {
+    font-size: 1rem;
+}
+
+.container {
+    width: 100px;
+    height: 100px;
+    background-color: cadetblue;
+    border: 5
+}
+
+.image {
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;
+    background-image: url(https://img.freepik.com/free-photo/elephants-drinking-water_181624-5984.jpg?w=1060&t=st=1667306406~exp=1667307006~hmac=cbcca0731a79e3de526496ba24d3be45022ae5d67bcae355e09a7cd5a3d34c5e)
+}
+
+@media screen and (min-width:680px){
+    h1 {
+        font-size: 3rem;
+    }
+
+    p {
+        font-size: 24px;
+    }
+    .container {
+        width: 250px;
+        height: 250px;
+        background-color:aquamarine;
+        border: 5px solid cornflowerblue;
+        margin: 0 auto;
+        border-radius: 25%;
+    }
+
+    .image {
+        width: 600px;
+        height: 600px;
+        background-image: url(https://img.freepik.com/free-photo/embarrassed-holiday-maker-drinks-cold-summer-cocktail-spends-free-time-beach-wears-swimcap-sailor-t-shirt_273609-27014.jpg?w=740&t=st=1667306608~exp=1667307208~hmac=b0d44cf3f024ff7f805c2d8d87feb644b5e61da90cdf1d6e7b5f2eecb35e06d1);
+    }
+}
+
+@media screen and (min-width) {
+    h1 {
+        font-size: 4rem;
+
+    }
+
+    p {
+        font-size: 36px;
+    }
+
+}
