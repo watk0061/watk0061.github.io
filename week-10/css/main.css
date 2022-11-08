@@ -1,0 +1,30 @@
+body {
+    color:black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/*******
+Parent for flexbox
+*******/
+
+.container {
+    /* This is the property required to start using flexbox */
+    display: flex;
+    flex-wrap: wrap-reverse;
+    flex-direction: row;
+    margin: 0 0 50px 0;
+    padding: 5px;
+    background-color: #4980d2;
+}
+
+/*
+Children for flexbox 
+*/
+
+.box {
+    padding: 2rem;
+    margin: 5px;
+    background-color: #cee3fe;
+    text-align:center;
+}
+
