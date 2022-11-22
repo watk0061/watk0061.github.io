@@ -1,0 +1,151 @@
+.container {
+    background-color: blanchedalmond;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.grid-container {
+    background-color: burlywood;
+    border-radius: 5px;
+    border: 1px solid grey;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2em;
+    row-gap: 1em;
+    grid-auto-rows: 100px;
+    gap: 1em 2em;
+    grid-auto-rows: 100px;
+}
+
+.box {
+    background-color: khaki;
+    border: 2px solid grey;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.box1 {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: span 2;
+}
+
+.box2 {
+    grid-column-start: 1;
+    grid-row-start: 3;
+    grid-row-end: 5;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(150px, 1fr));
+    grid-gap: 10px;
+    /* Creates rows to specifiy height */
+    grid-auto-rows: 150px;
+    /* default */
+    /* grid-auto-flow: row; */
+    /* when it runs out of space, it adds columns anything beyond what it to */
+    /* grid-auto-flow: column; */
+    /* will attempt to fill any gaps that appear in the grid */
+    grid-auto-flow: dense;
+}
+
+.pic {
+    font-weight: 700;
+    font-family: sans-serif;
+    background-color: darkkhaki;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.pic:nth-child(3n) {
+    background-color: darkslategrey;
+    grid-column: span 2;
+    grid-row: span 1;
+}
+
+/*
+Grid.html page
+*/
+
+.grid-wrapper {
+    background-color: honeydew;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: (repeat(4, 1fr));
+    grid-template-areas: 
+    "header" 
+    "nav" 
+    "main" 
+    "footer";
+}
+
+header {
+    background-color: antiquewhite;
+    grid-area: header;
+}
+
+nav {
+    grid-area: nav;
+    background-color: bisque;
+}
+
+main {
+    grid-area: main;
+}
+
+footer {
+    grid-area: footer;
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .grid-wrapper {
+        grid-template-areas: 
+        "header" "header"
+        "nav" "nav"
+        "main" "main"
+        "footer" "footer";
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (min-width:980px) {
+    .container {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .grid-wrapper {
+        grid-template-areas: 
+        "header" "header" "header"
+        "nav" "nav" "nav"
+        "main" "main" "main"
+        "footer" "footer" "footer";
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (min-width:768px) {
+    .container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media screen and (min-width: 980px) {
+    .container {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
